@@ -1,7 +1,7 @@
 <template>
 <div class="status-bar">
   <span>{{ time }}</span>
-  <span v-if="logged">Logged in as <b>{{ user }}</b></span>
+  <span>Logged in as <b>{{ user }}</b></span>
 </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
   name: 'StatusBar',
   props:{
     user: String,
-    logged: Boolean
   },
   data(){
     return {

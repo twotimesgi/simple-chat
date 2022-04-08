@@ -1,8 +1,8 @@
 <template>
 <div id="app">
   <status-bar :user="user"/>
-    <message-box v-if="logged" :user="user"/>
-    <input-box v-if="logged" />
+    <message-box :user="user"/>
+    <input-box />
 </div>
 </template>
 
