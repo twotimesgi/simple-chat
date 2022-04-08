@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted(){
-    this.user="Guest#" + Math.floor(Math.rand()*100);
+    this.user="Guest#" + Math.floor(Math.random()*1000000);
     setInterval(()=>{
       Axios.request("../public/send.php").then((response)=>{
         console.log(response);
