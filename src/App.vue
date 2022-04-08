@@ -1,14 +1,7 @@
 <template>
 <div id="app">
-  <status-bar :logged="logged" :user="user"/>
-    <div v-if="!logged" class="login-box">
-      <div>
-      <h4>Scegli il tuo username: </h4>
-      <input placeholder="username" v-model="user" type="text">
-      <button @click="login">Login</button>
-      </div>
-    </div>
-    <message-box v-if="logged" :userId="userId"/>
+  <status-bar :user="user"/>
+    <message-box v-if="logged" :user="user"/>
     <input-box v-if="logged" />
 </div>
 </template>
@@ -28,21 +21,18 @@ export default {
   },
   data(){
     return {
-      logged: false,
       user: "",
-      userId: null,
+      userId: "",
       messages: []
     }
   },
-  methods:{
-    login(){
-      this.logged = true;
-      setInterval(()=>{
+  mounted(){
+    this.user="Guest#" + Math.floor(Math.rand()*100);
+    setInterval(()=>{
       Axios.request("../public/send.php").then((response)=>{
         console.log(response);
       });
     }, 1000)
-    }
   }
 }
 </script>
