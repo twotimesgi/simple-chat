@@ -39,7 +39,6 @@ export default {
       Axios.request("../public/send.php").then((response)=>{
         console.log(response);
       });
-      this.messages
     }, 1000)
   },
   methods:{
