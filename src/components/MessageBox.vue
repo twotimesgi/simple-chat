@@ -1,6 +1,6 @@
 <template>
 <div class="message-box">
-  <div v-for="msg in fetchedMsgs" :key="msg.id" :class="user == msg.sender ? 'sent' : 'received'" class="message">
+  <div v-for="msg in fetchedMsgs" :key="msg.sender+msg.text+msg.time" :class="user == msg.sender ? 'sent' : 'received'" class="message">
     <div class="msg-sender">{{ msg.sender }}</div>
     {{ msg.text }}
     <div class="msg-time"> {{ dateToString(msg.time) }} </div>
@@ -18,31 +18,26 @@ export default {
     return {
       fetchedMsgs: [
         {
-          id: 1,
           sender: "Marco",
           text: "Ciao caro",
           time: "2022-08-04T15:00:00"
         },
         {
-          id: 2,
           sender: "twotimesgi",
           text: "Ciao Marco",
           time: "2022-08-04T15:00:00"
         },
         {
-          id: 3,
           sender: "Luca",
           text: "Ciao a tutti",
           time: "2022-08-04T15:05:00"
         },
         {
-          id: 4,
           sender: "Marco",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius soluta nihil maiores corporis veniam quibusdam magni numquam illum pariatur, assumenda fugiat expedita optio! Reprehenderit culpa neque recusandae laboriosam dolores!",
           time: "2022-08-04T15:06:00"
         },
         {
-          id: 5,
           sender: "twotimesgi",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
           time: "2022-08-04T15:00:00"

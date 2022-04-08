@@ -29,7 +29,7 @@ export default {
   mounted(){
     this.user="Guest#" + Math.floor(Math.random()*1000000);
     setInterval(()=>{
-      Axios.request("/send.php").then((response)=>{
+      Axios.request("/messages.php").then((response)=>{
         console.log(response);
       });
     }, 1000)
