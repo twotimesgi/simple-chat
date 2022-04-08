@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import InputBox from './InputBox.vue';
-import MessageBox from "./MessageBox.vue";
-import StatusBar from "./StatusBar.vue";
+import InputBox from './components/InputBox.vue';
+import MessageBox from "./components/MessageBox.vue";
+import StatusBar from "./components/StatusBar.vue";
 import Axios from 'axios';
 
 export default {
