@@ -34,16 +34,14 @@ export default {
       messages: []
     }
   },
-  mounted(){
-    setInterval(()=>{
+  methods:{
+    login(){
+      this.logged = true;
+      setInterval(()=>{
       Axios.request("../public/send.php").then((response)=>{
         console.log(response);
       });
     }, 1000)
-  },
-  methods:{
-    login(){
-      this.logged = true;
     }
   }
 }
