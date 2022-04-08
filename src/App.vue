@@ -39,6 +39,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+body{
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #app{
   width: 700px;
   height: 500px;
@@ -46,27 +52,7 @@ export default {
   position: relative;
 }
 
-.login-box{
-  width: 100%;
-  height:425px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  }
-
-  input{
-      margin: 10px 0;
-  }
-}
-
-
-.chat::before {
+#app::before {
   content: "";
   height: 5px;
   background: rgb(0, 210, 123);
