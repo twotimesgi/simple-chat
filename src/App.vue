@@ -17,6 +17,7 @@
 import InputBox from './InputBox.vue';
 import MessageBox from "./MessageBox.vue";
 import StatusBar from "./StatusBar.vue";
+import Axios from 'axios';
 
 export default {
   name: 'App',
@@ -29,12 +30,16 @@ export default {
     return {
       logged: false,
       user: "",
-      userId: null
+      userId: null,
+      messages: []
     }
   },
   mounted(){
     setInterval(()=>{
-      console.log("fetchmsg");
+      Axios.request("../public/send.php").then((response)=>{
+        console.log(response);
+      });
+      this.messages
     }, 1000)
   },
   methods:{
