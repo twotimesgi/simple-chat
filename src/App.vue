@@ -43,17 +43,17 @@ export default {
 
 body{
   background-color: rgb(29, 29, 29);
-  display: flex;
-  justify-content: center;
   font-family: 'Roboto', sans-serif;
-  align-items: center;
 }
 
 #app{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 700px;
   height: 500px;
   background-color: rgb(252, 252, 252);
-  position: relative;
 }
 
 #app::before {
