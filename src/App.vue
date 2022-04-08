@@ -38,13 +38,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 body{
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+  
   background-color: rgb(29, 29, 29);
   display: flex;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
   align-items: center;
 }
+
 #app{
   width: 700px;
   height: 500px;
