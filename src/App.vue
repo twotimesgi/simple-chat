@@ -37,10 +37,13 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body{
   background-color: rgb(29, 29, 29);
   font-family: 'Roboto', sans-serif;
